@@ -33,7 +33,7 @@ def callback(mesg_list, time):
 		elif mesg[0] == cwiid.MESG_ACC:
 			# print_there(rows-2,2,'Acc Report: x=%d, y=%d, z=%d' % (mesg[1][cwiid.X], mesg[1][cwiid.Y], mesg[1][cwiid.Z]))
 			k = int(mesg[1][cwiid.X] * columns / 250)
-			print(k * "*")
+			print_there(rows-1,k * "*",(columns-k) * " ")
 
 		elif mesg[0] == cwiid.MESG_IR:
 			valid_src = False
